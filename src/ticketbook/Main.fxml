@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ticketbook.MainController">
+   <children>
+      <AnchorPane layoutY="100.0" prefHeight="330.0" prefWidth="500.0" style="-fx-background-color: #fff;">
+         <children>
+            <JFXTextField fx:id="nama" focusColor="#00ff9d" labelFloat="true" layoutX="14.0" layoutY="68.0" maxWidth="248.0" minWidth="234.0" prefHeight="31.0" prefWidth="235.0" promptText="Nama Lengkap">
+               <font>
+                  <Font name="Roboto" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="ktp" focusColor="#00ff9d" labelFloat="true" layoutX="14.0" layoutY="132.0" maxWidth="248.0" minWidth="234.0" prefHeight="31.0" prefWidth="235.0" promptText="No. KTP" />
+            <JFXTextField fx:id="umur" focusColor="#00ff9d" labelFloat="true" layoutX="14.0" layoutY="200.0" maxWidth="248.0" minWidth="92.0" prefHeight="31.0" prefWidth="92.0" promptText="Umur" />
+            <Label layoutX="116.0" layoutY="201.0" text="Tahun">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="14.0" text="Identitas">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="PENCIL" layoutX="60.0" layoutY="36.0" size="22" />
+            <Label layoutX="343.0" layoutY="14.0" text="Tiket Film">
+               <font>
+                  <Font name="Roboto" size="24.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView glyphName="TICKET" layoutX="309.0" layoutY="36.0" size="22" />
+            <JFXComboBox fx:id="film" layoutX="285.0" layoutY="71.0" prefHeight="25.0" prefWidth="190.0" promptText="Nama Film" />
+            <JFXComboBox fx:id="jam" layoutX="285.0" layoutY="135.0" prefHeight="25.0" prefWidth="190.0" promptText="Jam Tayang" />
+            <JFXDatePicker fx:id="tgl" defaultColor="#01d3be" layoutX="285.0" layoutY="200.0" prefHeight="31.0" prefWidth="190.0" promptText="Tanggal" />
+            <JFXButton fx:id="oke" layoutX="185.0" layoutY="276.0" onAction="#Simpan" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #1de9b6;" text="Simpan">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="100.0" prefWidth="500.0" style="-fx-background-color: #1de9b6;">
+         <children>
+            <Label layoutX="89.0" layoutY="28.0" text="Booking Ticket Film">
+               <font>
+                  <Font name="Roboto" size="36.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fx:id="close" glyphName="CLOSE" layoutX="469.0" layoutY="33.0" onMousePressed="#Close" size="24" />
+         </children>
+         <effect>
+            <DropShadow color="#404040" height="15.0" radius="3.25" width="0.0" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>
